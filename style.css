@@ -363,13 +363,18 @@ font-size: 35px;
   }
 
   .home-btn {
-    max-width: 57vw;
+    max-width: 72vw;
     display: flex;
     gap: 1vw;
     padding-left: 0vw;
 
   }
-
+  .btn{
+    height: 10vh;
+    width: 56vw;
+    font-size: 9px;
+    
+  }
 
 }
 
