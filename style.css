@@ -226,12 +226,12 @@ body {
 
 .service-card:hover {
   box-shadow: 8px 9px 20px 0px rgba(0, 0, 0, 0.562);
-
+transform: scale(1,1);
 }
 
 .service-card:not(:hover) {
-
   filter: grayscale();
+  transform: scale(0.9,0.9);
 
 }
 .service-link{
@@ -266,10 +266,12 @@ body {
 }
 .pricing-card:hover{
   box-shadow: 8px 9px 20px 0px rgba(0, 0, 0, 0.562);
+  transform: scale(1,1);
  
 }
 .pricing-card:not(:hover){
 filter: grayscale();
+transform: scale(0.9,0.9);
 }
 .pricing-card img{
  height: 25vh;
@@ -321,6 +323,13 @@ font-size: 35px;
   min-width: 8vw;
   font-size: 14px;
   font-weight: 600;
+  transition:all .3s ease;
+}
+.contact-btn:hover{
+  background-color: white;
+  transform: scale(1.1,1.1);
+  border:2px solid #0066F4;
+  color: #0066F4;
 }
 #footer{
   height: 18vh;
@@ -395,18 +404,25 @@ font-size: 35px;
     font-size: 13px;
     
   }
-  .service-card:not(:hover) {
-  
+  .service-card:hover{
+    transform: scale(0.9,0.9);
+  }
+  .service-card:not(:hover){
     filter: none;
+    transform: scale(0.9,0.9);
   
   }
   .pricing-card:not(:hover) {
-  
+    transform: scale(1,1);
     filter: none;
   
   }
+  .footer-text{
+    font-size: 14px;
+  }
 
   }
+  
 
 
 
