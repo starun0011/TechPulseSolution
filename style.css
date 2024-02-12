@@ -14,7 +14,7 @@ body {
   height: 100% !important;
   width: 100%;
   overflow-x: hidden;
-  
+
 
 }
 
@@ -24,7 +24,7 @@ body {
   height: 80px;
   align-items: center;
   background-color: rgb(0, 103, 244);
-  position: fixed;
+  position: sticky;
 
   top: 0;
   left: 0;
@@ -89,11 +89,13 @@ body {
   color: white;
 }
 
-/* main body css */
+
+
+/* ------- Home Section Css -------------- */
 
 #home {
   display: flex;
-  padding-top: 80px;
+  /* padding-top: 80px; */
 
   height: 100vh;
   width: 100%;
@@ -187,14 +189,14 @@ body {
 }
 
 
-/* CSS FOR SERVICE SECTION */
+/* ------- Service Section Css -------------- */
 
 #services {
   width: 100%;
   padding-top: 80px;
   display: flex;
   flex-direction: column;
-  background-color: #e8eef0;
+  /* background-color: black; */
 
 }
 
@@ -230,20 +232,24 @@ transform: scale(1,1);
 }
 
 .service-card:not(:hover) {
-  filter: grayscale();
+  /* filter: grayscale(); */
   transform: scale(0.9,0.9);
+  box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.562);
 
 }
 .service-link{
   max-width: fit-content;
 }
+
+/* ------- Pricing Section Css -------------- */
+
 #pricing{
-  
+
   width: 100%;
   padding-top: 80px;
 }
 .pricing-heading {
-  
+
   text-align: center;
   text-transform: capitalize;
   font-weight: 600;
@@ -267,10 +273,11 @@ transform: scale(1,1);
 .pricing-card:hover{
   box-shadow: 8px 9px 20px 0px rgba(0, 0, 0, 0.562);
   transform: scale(1,1);
- 
+
 }
 .pricing-card:not(:hover){
-filter: grayscale();
+/* filter: grayscale(); */
+  box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.562);
 transform: scale(0.9,0.9);
 }
 .pricing-card img{
@@ -302,13 +309,16 @@ font-size: 35px;
   color: white;
   background-color: #0066F4;
   transition: .3s;
-  
+
 }
 .pricing-card>button:hover{
   transform: scale(1.1,1.1);
   box-shadow: 2px 4px 6px 0px rgba(0, 0, 0, 0.727);
 
 }
+
+/* ------- Contact Section Css -------------- */
+
 #contact{
   /* height: 100vh; */
   width: 100%;
@@ -331,18 +341,24 @@ font-size: 35px;
   border:2px solid #0066F4;
   color: #0066F4;
 }
+
+  /* ------- footer Section Css -------------- */
+
 #footer{
   height: 18vh;
   width: 100%;
   background-color: black;
 }
 
+
+/* ------- media query for mobile -------------- */
+
 @media screen and (max-width:430px) {
 
   .nav-logo img {
     height: 55px;
     width: 12vw;
-    
+
   }
   .navigation{
     border-bottom: 1px solid #e5d7d7;
@@ -368,7 +384,7 @@ font-size: 35px;
   }
 
   .home-r-container {
-  
+
     display: none;
 
   }
@@ -380,7 +396,7 @@ font-size: 35px;
   .home-heading h1 {
     font-size: 17vw;
     font-weight: 700;
-    
+
   }
   .home-para {
     color: white;
@@ -399,10 +415,10 @@ font-size: 35px;
 
   }
   .btn{
-    height: 8vh;
+    height: 6vh;
     width: 30vw;
-    font-size: 13px;
-    
+    font-size: 12px;
+
   }
   .service-card:hover{
     transform: scale(0.9,0.9);
@@ -410,21 +426,34 @@ font-size: 35px;
   .service-card:not(:hover){
     filter: none;
     transform: scale(0.9,0.9);
-  
+
+  }
+  .pricing-card{
+    align-items: center;
+    padding: 2px 21px 37px 21px;
+  }
+  .pricing-card img{
+   height: 18vh;
+   width: 25vw;
+  }
+  .pricing-card>p{
+    text-align: center;
   }
   .pricing-card:not(:hover) {
     transform: scale(1,1);
     filter: none;
-  
+
+  }
+  .contact-btn{
+    font-size: 16px !important;
   }
   .footer-text{
     font-size: 14px;
   }
 
   }
-  
 
-
+/* ------- media query for table -------------- */
 
 @media screen and (min-width:431px) and (max-width:650px) {
   .home-btn {
@@ -443,7 +472,7 @@ font-size: 35px;
   .home-l-container {
     /* display: none; */
       padding: 9vw 3.9vw !important;
-      
+
   }
   .home-heading h1 {
     font-size: 9vw;
@@ -460,6 +489,9 @@ font-size: 35px;
 
   }
 }
+
+/* ------- media query for laptop -------------- */
+
 @media screen and (min-width: 992px){
 .gap-lg-5 {
     gap: 1rem!important;
