@@ -373,7 +373,7 @@ font-size: 35px;
     display: flex;
     padding-top: auto 0px auto 0px;
 
-    height: 85vh;
+    height: 75vh;
     width: 100%
   }
 
@@ -421,7 +421,8 @@ font-size: 35px;
 
   }
   .service-card:hover{
-    transform: scale(0.9,0.9);
+    transform: scale(0.93,0.93);
+    box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.562);
   }
   .service-card:not(:hover){
     filter: none;
@@ -438,6 +439,10 @@ font-size: 35px;
   }
   .pricing-card>p{
     text-align: center;
+  }
+  .pricing-card:hover{
+    transform: scale(1.03,1.03);
+    box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.562);
   }
   .pricing-card:not(:hover) {
     transform: scale(1,1);
@@ -463,9 +468,10 @@ font-size: 35px;
     padding-left: 2vw;
 }
   .btn {
-    font-size: 14px;
+    font-size: 13px;
     width: 160px;
     height: 8vh;
+    line-height: 14px;
     text-align: center;
     padding-bottom: 9px;
   }
