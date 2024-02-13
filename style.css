@@ -77,8 +77,11 @@ body {
 .nav-elements ul li a {
   font-size: 20px;
   text-decoration: none;
-  color: rgba(255, 255, 255, 0.486);
-  transition: all .3s ease;
+  color: rgba(255, 255, 255);
+  transition: all .2s ease;
+  padding-bottom: 5px;
+  text-shadow: 0px 4px 3px #000;
+  transform: scale(0.9,0.9);
 }
 
 
@@ -87,11 +90,14 @@ body {
 .nav-elements ul li a:focus,
 .nav-elements ul li a.active {
   color: white;
+  transform: scale(1,1);
+  border-bottom: 1px solid rgb(255, 255, 255,0.7);
+  
 }
 
 /* ------- mobile nav Css -------------- */
 
-.mob-nav-icon{
+.mob-nav-icon {
   width: 40px;
   height: 40px;
   color: white;
@@ -100,11 +106,13 @@ body {
   margin-right: 15px;
   cursor: pointer;
 }
-.mob-nav-btn{
+
+.mob-nav-btn {
   font-size: 40px;
   color: white;
 }
-#mob-nav-btn-2{
+
+#mob-nav-btn-2 {
   display: none;
 }
 
@@ -116,6 +124,8 @@ body {
 
   height: 100vh;
   width: 100%;
+  position: relative;
+  background-color: rgb(0, 102, 244);
 
 
 }
@@ -125,11 +135,28 @@ body {
   display: flex;
   flex-direction: column;
   padding: 6vw 4vw;
-  background-color: rgb(0, 102, 244);
+  
 }
+.svg-container{
+  display: none;
+  height: auto;
+  width: 75vw;
+  /* border: 2px solid red; */
+  position: absolute;
+  bottom:24%;
+  right: 2%;
+  opacity: 0.6;
+  z-index: 1;
+}
+.svg-container img{
+  height: 100%;
+  width: 100%;
+  
+}
+
 .home-r-container {
   /* flex-grow: 2; */
-  background-color: rgb(0, 102, 244);
+  
   max-width: fit-content;
 
 }
@@ -143,11 +170,13 @@ body {
 .home-heading h1 {
   font-size: 6vw;
   font-weight: 700;
+  text-shadow: 2px 2px 10px black;
 }
 
 .home-para {
   color: white;
   max-width: 34vw;
+  text-shadow: 2px 2px 10px black;
 }
 
 .home-para p {
@@ -247,37 +276,41 @@ body {
 
 .service-card:hover {
   box-shadow: 8px 9px 20px 0px rgba(0, 0, 0, 0.562);
-transform: scale(1,1);
+  transform: scale(1, 1);
 }
 
 .service-card:not(:hover) {
   /* filter: grayscale(); */
-  transform: scale(0.9,0.9);
+  transform: scale(0.9, 0.9);
   box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.562);
 
 }
-.service-link{
+
+.service-link {
   max-width: fit-content;
 }
 
 /* ------- Pricing Section Css -------------- */
 
-#pricing{
+#pricing {
 
   width: 100%;
   padding-top: 80px;
 }
+
 .pricing-heading {
 
   text-align: center;
   text-transform: capitalize;
   font-weight: 600;
 }
-.pricing-para{
+
+.pricing-para {
   text-align: center;
   font-size: 20px;
 }
-.pricing-card{
+
+.pricing-card {
   max-width: 19rem;
   display: flex;
   flex-direction: column;
@@ -289,37 +322,43 @@ transform: scale(1,1);
   transition: .3s;
   margin: 8px;
 }
-.pricing-card:hover{
+
+.pricing-card:hover {
   box-shadow: 8px 9px 20px 0px rgba(0, 0, 0, 0.562);
-  transform: scale(1,1);
+  transform: scale(1, 1);
 
 }
-.pricing-card:not(:hover){
-/* filter: grayscale(); */
+
+.pricing-card:not(:hover) {
+  /* filter: grayscale(); */
   box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.562);
-transform: scale(0.9,0.9);
+  transform: scale(0.9, 0.9);
 }
-.pricing-card img{
- height: 25vh;
- width: 25vw;
+
+.pricing-card img {
+  height: 25vh;
+  width: 25vw;
 }
-.pricing-card h3{
+
+.pricing-card h3 {
   font-size: 22px;
 }
-.pricing-card h1{
-font-size: 35px;
+
+.pricing-card h1 {
+  font-size: 35px;
 }
-.pricing-card h1 span{
+
+.pricing-card h1 span {
   font-size: 19px;
 }
 
 .pricing-card>p {
-    font-size: 14px;
-    max-width: 59vw;
-    /* border: 2px solid; */
+  font-size: 14px;
+  max-width: 59vw;
+  /* border: 2px solid; */
 }
 
-.pricing-card>button{
+.pricing-card>button {
   font-size: 14px;
   font-weight: 800;
   padding: 7px 13px;
@@ -330,21 +369,23 @@ font-size: 35px;
   transition: .3s;
 
 }
-.pricing-card>button:hover{
-  transform: scale(1.1,1.1);
+
+.pricing-card>button:hover {
+  transform: scale(1.1, 1.1);
   box-shadow: 2px 4px 6px 0px rgba(0, 0, 0, 0.727);
 
 }
 
 /* ------- Contact Section Css -------------- */
 
-#contact{
+#contact {
   /* height: 100vh; */
   width: 100%;
   padding-top: 80px;
   background-color: #E8EEF0;
 }
-.contact-btn{
+
+.contact-btn {
   border: #fff;
   color: white;
   background-color: #0066F4;
@@ -352,18 +393,19 @@ font-size: 35px;
   min-width: 8vw;
   font-size: 14px;
   font-weight: 600;
-  transition:all .3s ease;
+  transition: all .3s ease;
 }
-.contact-btn:hover{
+
+.contact-btn:hover {
   background-color: white;
-  transform: scale(1.1,1.1);
-  border:2px solid #0066F4;
+  transform: scale(1.1, 1.1);
+  border: 2px solid #0066F4;
   color: #0066F4;
 }
 
-  /* ------- footer Section Css -------------- */
+/* ------- footer Section Css -------------- */
 
-#footer{
+#footer {
   height: 18vh;
   width: 100%;
   background-color: black;
@@ -379,11 +421,12 @@ font-size: 35px;
     width: 12vw;
 
   }
-  .navigation{
+
+  .navigation {
     border-bottom: 1px solid #e5d7d7;
   }
 
-  
+
 
   #home {
     display: flex;
@@ -395,8 +438,12 @@ font-size: 35px;
 
 
   .home-l-container {
-    padding: 13vh 4vw;
+    padding: 15vh 4vw;
     /* border: 2px solid red; */
+    
+  }
+  .svg-container{
+    display: inline-block;
   }
 
   .home-r-container {
@@ -404,22 +451,33 @@ font-size: 35px;
     display: none;
 
   }
+
   .home-heading {
+    z-index: 3;
     color: white;
     max-width: 90vw;
+    margin-bottom: 3px;
+    /* border: 2px solid white; */
 
   }
+
   .home-heading h1 {
-    font-size: 17vw;
+    font-size: 15vw;
     font-weight: 700;
+    text-shadow: 2px 2px 10px black;
+    margin-top: -12px;
 
   }
+
   .home-para {
     color: white;
     max-width: 54vw;
-    margin-bottom: 14%;
+    margin-bottom: 12%;
+    z-index: 3;
   }
+
   .home-para p {
+    text-shadow: 2px 2px 10px black;
     font-size: 12px;
   }
 
@@ -427,102 +485,124 @@ font-size: 35px;
     max-width: 72vw;
     display: flex;
     gap: 1vw;
+    z-index: 3;
     padding-left: 0vw;
 
   }
-  .btn{
+
+  .btn {
     height: 6vh;
     width: 30vw;
     font-size: 12px;
+    z-index: 3;
 
   }
-  .service-card:hover{
-    transform: scale(0.93,0.93);
+
+  .service-card:hover {
+    transform: scale(0.93, 0.93);
     box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.562);
   }
-  .service-card:not(:hover){
+
+  .service-card:not(:hover) {
     filter: none;
-    transform: scale(0.9,0.9);
+    transform: scale(0.9, 0.9);
 
   }
-  .pricing-card{
+
+  .pricing-card {
     align-items: center;
     padding: 2px 21px 37px 21px;
   }
-  .pricing-card img{
-   height: 18vh;
-   width: 25vw;
+
+  .pricing-card img {
+    height: 18vh;
+    width: 25vw;
   }
-  .pricing-card>p{
+
+  .pricing-card>p {
     text-align: center;
   }
-  .pricing-card:hover{
-    transform: scale(1.03,1.03);
+
+  .pricing-card:hover {
+    transform: scale(1.03, 1.03);
     box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.562);
   }
+
   .pricing-card:not(:hover) {
-    transform: scale(1,1);
+    transform: scale(1, 1);
     filter: none;
 
   }
-  .contact-btn{
+
+  .contact-btn {
     font-size: 16px !important;
   }
-  .footer-text{
+
+  .footer-text {
     font-size: 14px;
   }
 
-  }
+}
 
 /* ------- media query for mobile navigation -------------- */
 
 @media screen and (max-width:768px) {
+  
   .nav-logo {
     padding-left: 15px;
-    
+
     justify-content: flex-start;
-    
+
   }
-  .navigation{
+
+  .navigation {
     position: ;
   }
-  .nav-elements{
+
+  .nav-elements {
     /* display: none; */
     opacity: 0;
     visibility: hidden;
     pointer-events: none;
-    
+    padding-right: 30%;
+    padding-bottom: 35vh;
     width: 100%;
     height: 100vh;
-    scroll-behavior:smooth ;
-    background-color: white;
+    scroll-behavior: smooth;
+    background-color: rgb(255, 245, 245);
+    /* backdrop-filter: blur(2px);    */
     position: absolute;
     top: 0;
-    left: 0;
+    left: 30%;
     display: flex;
     justify-content: center;
     align-items: center;
 
-    
+/* border:1px solid red; */
     transform: translateX(100%);
-    transition:  all 0.2s linear ;
-    
+    transition: all 0.3s linear;
+
   }
-  .mob-active .nav-elements{
+  
+
+  .mob-active .nav-elements {
     opacity: 1;
     visibility: visible;
     pointer-events: auto;
     transform: translateX(0%);
   }
-  .mob-active .mob-nav-icon #mob-nav-btn-2{
+
+  .mob-active .mob-nav-icon #mob-nav-btn-2 {
     display: inline-block;
     color: black;
   }
-  .mob-active .mob-nav-icon #mob-nav-btn-1{
+
+  .mob-active .mob-nav-icon #mob-nav-btn-1 {
     display: none;
   }
-  .nav-elements ul{
-    
+
+  .nav-elements ul {
+
 
     display: flex;
     flex-direction: column;
@@ -532,29 +612,45 @@ font-size: 35px;
     /* padding-top: 20%; */
     /* border: 2px solid yellow; */
   }
-  .mob-nav-icon{
+
+  .mob-nav-icon {
     display: inline-block;
     color: black;
   }
-  .nav-elements ul li a{
+
+  .nav-elements ul li a {
     color: black;
+    transition: 0.2s;
+    font-size: 18px;
+    text-shadow:none;
+    
+    
   }
+  
+  
+
   .nav-elements ul li a:hover,
   .nav-elements ul li a:focus,
-  .nav-elements ul li a.active {
+.nav-elements ul li a.active {
+    
     color: black;
+    font-weight: 600;
+    transform: scale(1.2,1.2);
+   border-bottom: 1px solid black;
+    
   }
 }
 
 /* ------- media query for table -------------- */
 
-@media screen and (min-width:431px) and (max-width:650px) {
+@media screen and (min-width:431px) and (max-width:768px) {
   .home-btn {
-    min-width: 49vw!important;
+    min-width: 49vw !important;
     display: flex;
     gap: 2vw;
     padding-left: 2vw;
-}
+  }
+
   .btn {
     font-size: 13px;
     width: 160px;
@@ -563,26 +659,29 @@ font-size: 35px;
     text-align: center;
     padding-bottom: 9px;
   }
+
   .home-l-container {
     /* display: none; */
     flex-grow: 1;
-    padding: 9vw 3.9vw !important;
+    padding:11vw 3.9vw !important;
 
   }
+
   .home-r-container {
     flex-grow: 1;
     background-color: rgb(0, 102, 244);
     max-width: 36%;
 
   }
-  .home-heading h1 {
-    font-size: 9vw;
-    font-weight: 700;
-}
 
-.home-para p {
-  font-size: 13px;
-}
+  .home-heading h1 {
+    font-size: 10vw;
+    font-weight: 700;
+  }
+
+  .home-para p {
+    font-size: 13px;
+  }
 
   .service-up-row h2 {
     font-size: 37px;
@@ -593,8 +692,8 @@ font-size: 35px;
 
 /* ------- media query for laptop -------------- */
 
-@media screen and (min-width: 992px){
-.gap-lg-5 {
-    gap: 1rem!important;
-}
+@media screen and (min-width: 992px) {
+  .gap-lg-5 {
+    gap: 1rem !important;
+  }
 }
